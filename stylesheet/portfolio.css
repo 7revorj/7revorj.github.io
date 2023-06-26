@@ -70,6 +70,7 @@ img {
     height: 340px; /* Sets the height of all images */
     display: block; /* By specifying block display we can ensure our images are able to be centered */
     margin-left: auto; /* In combinatino with "margin-right: auto" this centers all images */
+    margin-right: auto;
 }
 
 /* Image element hover effects */
@@ -285,4 +286,21 @@ form {
     padding: 10px; /* Adds padding to the contact form */
     font-family: "Trebuchet MS", Optima;
 }
+
+.video {
+    position: relative;
+    display: block; /* By specifying block display we can ensure our images are able to be centered */
+    margin-left: auto;  /* In combinatino with "margin-right: auto" this centers all images */
+    margin-right: auto;
+    width: 400px;
+    height: 550px;
+}
+
+.video-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+}
+
 /***** END OF CONTACT FORM STYLING *****/
