@@ -289,18 +289,18 @@ form {
 
 .video {
     width: auto;
-        height: auto;
-        display: block;
-        /* By specifying block display we can ensure our images are able to be centered */
-        object-position: center;
-        object-fit: contain;
+    height: auto;
+    display: block;
+    /* By specifying block display we can ensure our images are able to be centered */
+    object-position: center;
+    object-fit: contain;
 }
 
 .video-container {
         display: flex;
         align-items: center;
         justify-content: center;
-            overflow: hidden;
+        overflow: hidden;
 }
 
 /***** END OF CONTACT FORM STYLING *****/
