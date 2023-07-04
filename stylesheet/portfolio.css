@@ -288,19 +288,19 @@ form {
 }
 
 .video {
-    position: relative;
-    display: block; /* By specifying block display we can ensure our images are able to be centered */
-    margin-left: auto;  /* In combinatino with "margin-right: auto" this centers all images */
-    margin-right: auto;
-    width: 400px;
-    height: 550px;
+    width: auto;
+        height: auto;
+        display: block;
+        /* By specifying block display we can ensure our images are able to be centered */
+        object-position: center;
+        object-fit: contain;
 }
 
 .video-container {
         display: flex;
         align-items: center;
         justify-content: center;
-
+            overflow: hidden;
 }
 
 /***** END OF CONTACT FORM STYLING *****/
