@@ -5,12 +5,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <title>Trevor Jelinek</title>
-        <link rel="stylesheet" type="text/css" href="stylesheet/portfolio.css">
+        <link rel="stylesheet" type="text/css" href="CSS/main.css">
+        <script src="JS/main.js"></script>
     </head>
 
     <!--Body-->
     <body class="background">
-
+<script>
+    document.body.classList.add('fade-out');
+</script>
         <!--Navbar-->
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
@@ -23,11 +26,11 @@
         <br>
         <br>
 
-        <!--Background video-->
+        <!--Background-->
         <div id="Home">
             <video autoplay muted loop id="Typing_Video">
                 <source src="images/video/Typing.mp4" type="video/mp4" class="video">
-                <!--Display message if video fails to run-->
+                <!-- Display message if video fails to run-->
                 Your browser does not support HTML5 video.
             </video>
         </div>
@@ -56,7 +59,7 @@
         <div class="Row" id="About">
             <!--Left column-->
             <div class="Column_2">
-                <img src="images/html_custom.png" alt="a Dual display with HTML and CSS code on screen">
+                <img src="images/html_custom.png" class="dual" alt="a Dual display with HTML and CSS code on screen">
             </div>
             <!--Right column-->
             <div class="Column_1">
@@ -92,33 +95,41 @@
         </div>
 
         <!--Contact Section-->
-        <div class="Row" id="Contact">
+
                 <!--Contact image, left column-->
-                <div class="Column_2 Column_tall video-container">
-                    <div class="video">
-                    <video autoplay muted loop id="Space_Laptop" src="becoming_lost.mp4" class="video"></video>
-                    </div>
-                </div>
-                <!--Contact form, right column-->
-                <div class="Column_1 Column_tall">
-                    <h1>Contact</h1>
-                    <!--This specifies where and how to send the form data; it is currently blank-->
-                    <form action="https://formspree.io/f/myyqgeyr" method="POST"> <!-- Here I am utilizing a 3rd party service to submit the contact form data-->
-                        <label>Name:</label>
-                            <input type="text" placeholder="Please enter your name here">
-                        <label>Email:</label>
-                            <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                        <label>Message:</label>
-                            <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                            <input type="submit" value="SUBMIT">
-                    </form>
-                </div>
-        </div>
              
+            <div class="video-container">
+                    <video autoplay muted loop id="Space_Laptop" src="becoming_lost.mp4" class="video2"></video>
+            </div>
+             
+                <!--Contact form, right column-->
+     
+               <div id="Contact">
+                    <button class="open-button" onclick="openForm()">CONTACT</button>
+                <div class="form-popup" id="myForm">
+                    <!--This specifies where and how to send the form data and creates a validation requirement.-->
+           
+                    <form name="Contact" action="https://formspree.io/f/myyqgeyr" class="form-container" onsubmit="return validateForm()" method="POST" > <!-- Here I am utilizing a 3rd party service to submit the contact form data-->
+                       <h1>Contact</h1>
+                        <label>Name</label>
+                            <input type="text" name="fname" placeholder="Please enter your name here" required>
+                        <label>Email</label>
+                            <input type="text" id="Email" name="Email" placeholder="Please enter your email here" required>
+                        <label>Message</label>
+                            <input type="text" id="Message" name="Message" placeholder="Please write your message here" required>
+                            <button type="submit" class="btn">SUBMIT</button>
+                            <button type="button" class="btn cancel"  onclick="closeForm()" value="Close">CLOSE</button>
+
+                    </form>
+                
+                </div>
+               
+        </div>
+    </div>
         <!--Footer section-->     
         <footer>
             <p>
-                <p class="center">&copy Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a>&nbsp; | &nbsp; Video &copy; Trevor Jelinek</p>
+                <p class="center">&copy Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a> | Video &copy; Trevor Jelinek</p>
                 <br>
             </p>
         </footer>
