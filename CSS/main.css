@@ -94,7 +94,7 @@ img {
     display: block; /* By specifying block display we can ensure our images are able to be centered */
     margin: auto auto auto auto; /* This centers all images */
 }
-video {
+#aivideo {
         filter: grayscale(75%);
             /* This rids our pictures of 75% of their color */
             border-radius: 8px;
