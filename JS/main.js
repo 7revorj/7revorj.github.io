@@ -42,12 +42,15 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active"; // This adds the active styling to the dot associated with the image
 
 }
-//This code will create close the contact form when the user clicks off of it
-//The first step is to add an event listener for any clicks on the website
+
+// This code will create close the contact form when the user clicks off of it
+// The first step is to add an event listener for any clicks on the website
+
+// This code will create close the contact form when the user clicks off of it
+// The first step is to add an event listener for any clicks on the website
 document.addEventListener("click", function (event) {
-    //Here we state that if the click happens on the cancel button OR anywhere that is not the contact form AND the click does not happen on any element with the contact class then call the closeForm() function
-    if (event.target.matches(".cancel") || !event.target.matches(".form-popup") && !event.target.closest(".Pop_Up_Button") && !event.target.closest(".contact")) {
+    // Here we state that if the click happens on the cancel button OR anywhere that is not the contact form AND the click does not happen on any element with the contact class then call the closeForm() function
+    if (event.target.matches(".cancel") || !event.target.closest(".form-popup") && !event.target.closest(".open-button") && !event.target.closest(".contact")) {
         closeForm()
     }
 }, false)
-
