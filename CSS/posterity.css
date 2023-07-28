@@ -1,0 +1,93 @@
+img:hover {
+    filter: grayscale(5%);
+    /* Brings back most of the image's color when hovered over */
+    transition: transform 1s;
+    /* Transition lasts 1 second */
+    transform: scale(1.1);
+    /* Image is increased slightly when hovered over */
+}
+
+
+/* The @media rule is used in media queries to apply different styles for different media/types of devices */
+/* On screens 576px and smaller the images will be 100px tall and centered vertically in the column */
+@media screen and (max-width: 576px) {
+    img {
+        height: 100px;
+        margin-top: 150px;
+    }
+}
+
+
+/* Screens 576px and smaller will display navbar links equally distributed */
+@media screen and (max-width: 576px) {
+    .Navbar a {
+        width: 25%;
+        /* This makes each link take up 1/4 of the navbar */
+        font-size: 12px;
+    }
+}
+
+
+
+/* Screens 576px and smaller will display a scroll bar if the text overflows the column height */
+@media screen and (max-width: 576px) {
+    .Column_1 {
+        overflow: auto;
+    }
+}
+
+
+/* This class is applied to the columns in the final row, overriding the height and padding to provide more room for 
+ the contact form while keeping the rest of the formatting from Column_1 or Column_2 */
+.Column_tall {
+    padding-top: 3.5%;
+    height: 450px;
+}
+
+
+
+
+
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw
+        /* adjust as needed */
+}
+
+.video {
+
+    animation: zoominoutsinglefeatured 15s forwards;
+}
+
+#Slideshow {
+    margin: 15px auto;
+    position: relative;
+    width: 37vw;
+    height: 360px;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+#Slideshow>div {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
